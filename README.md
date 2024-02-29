@@ -1,1 +1,5 @@
-# fraud-detection
+Project based on my university's final test. The aim of the work is, starting from big data (in particular the 'Paysim' dataset) and using nosql graphs and neo4j (a software for managing these), to create an appropriate key for detecting relevant relationships in order to obtain a dataframe that is lighter than the initial data, which we will use for the machine learning phase.
+
+Paysim' dataset: this dataset, whose key figures are customers, merchants and banks, contains synthetic financial data from a real mobile money network operator where the mobile phone is used as an electronic wallet to carry out transactions. The rows of the initial dataset are more than 6 million. The reason why the dataset is initially heavy, is that fraudsters use a technique called 'Layering', by which they create profiles related to them with the aim of making large money transfers through many small transactions, so as to evade the threshold above which a penalty is triggered. 
+
+So we use graph structures thanks to neo4j, and a key focused on the similarity between clients (based on email and/or phone and/or SSN), rather than on monetary transactions, to obtain a much lighter dataframe, which we will use for the training phase.
